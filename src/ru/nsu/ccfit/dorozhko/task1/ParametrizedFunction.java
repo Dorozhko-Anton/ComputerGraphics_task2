@@ -181,7 +181,7 @@ public class ParametrizedFunction {
         AbstractAction aboutAction = new AbstractAction("О программе", MainFrame.createImageIcon("/images/help_info2.png")) {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                JOptionPane.showMessageDialog(mainFrame, "Лабораторная работа №2s");
+                JOptionPane.showMessageDialog(mainFrame, "Лабораторная работа №2");
             }
         };
         mainFrame.addAction(aboutAction);
@@ -556,7 +556,5 @@ public class ParametrizedFunction {
         }
     }
 
-    public static void main(final String... args) {
-        new ParametrizedFunction();
-    }
+
 }
