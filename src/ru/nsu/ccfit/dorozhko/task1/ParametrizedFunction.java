@@ -195,6 +195,10 @@ public class ParametrizedFunction {
         mainFrame.addAction(exitAction);
         mainFrame.getFileMenu().add(exitAction);
         mainFrame.setVisible(true);
+
+        funcPanel.setX0(funcPanel.getWidth() / 2);
+        funcPanel.setY0(funcPanel.getHeight() / 2);
+        funcPanel.repaint();
     }
 
     /**
@@ -202,8 +206,8 @@ public class ParametrizedFunction {
      * Provides origin relative put Pixel, can pain Grid, can scale.
      */
     private class ParametrizedFunctionPanel extends JPanel {
-        private int x0 = 400;
-        private int y0 = 300;
+        private int x0;
+        private int y0;
         private int unitsX = 20;
         private int unitsY = 20;
         private int moveStep = 10;
