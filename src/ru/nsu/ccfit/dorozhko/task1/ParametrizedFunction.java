@@ -148,8 +148,8 @@ public class ParametrizedFunction {
                     @Override
                     public void actionPerformed(ActionEvent e) {
 
-                        funcPanel.setX0(400);
-                        funcPanel.setY0(300);
+                        funcPanel.setX0(funcPanel.getWidth() / 2);
+                        funcPanel.setY0(funcPanel.getHeight() / 2);
                         funcPanel.setUnitsX(20);
                         funcPanel.setUnitsY(20);
                     }
@@ -181,7 +181,7 @@ public class ParametrizedFunction {
         AbstractAction aboutAction = new AbstractAction("О программе", MainFrame.createImageIcon("/images/help_info2.png")) {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                JOptionPane.showMessageDialog(mainFrame, "Лабораторная работа №2");
+                JOptionPane.showMessageDialog(mainFrame, "Лабораторная работа №2s");
             }
         };
         mainFrame.addAction(aboutAction);
@@ -278,6 +278,8 @@ public class ParametrizedFunction {
 
         {
             setSize(800, 600);
+            x0 = (int) getSize().getWidth() / 2;
+            y0 = (int) getSize().getHeight() / 2;
         }
 
         /**
@@ -306,6 +308,7 @@ public class ParametrizedFunction {
         @Override
         protected void paintComponent(Graphics g) {
             super.paintComponent(g);
+
 
             maxX = ((getSize().getWidth() - x0) / unitsX);
             minX = -(double) x0 / unitsX;
@@ -556,5 +559,7 @@ public class ParametrizedFunction {
         }
     }
 
-
+    public static void main(final String... args) {
+        new ParametrizedFunction();
+    }
 }
